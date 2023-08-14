@@ -86,7 +86,7 @@ public:
 		delete[] m_bufScreen;
 	}
 
-	int ConstructConsole(int width, int height, int fontw, int fonth)
+	bool ConstructConsole(int width, int height, int fontw, int fonth)
 	{
 		if (m_hConsole == INVALID_HANDLE_VALUE)
 			return Error(L"Bad Handle");
@@ -167,7 +167,7 @@ public:
 		memset(m_bufScreen, 0, sizeof(CHAR_INFO) * m_nScreenWidth * m_nScreenHeight);
 
 		SetConsoleCtrlHandler((PHANDLER_ROUTINE)CloseHandler, TRUE);
-		return 1;
+		return true;
 	}
 
 	virtual void Draw(int x, int y, short c = 0x2588, short col = 0x000F)

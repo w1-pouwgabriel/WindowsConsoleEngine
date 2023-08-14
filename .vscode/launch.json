@@ -1,9 +1,6 @@
 {
     "configurations": [
       {
-        //Dont forget to compile first.....
-        "preLaunchTask": "Compile project",
-
         "name": "Launch",
         "type": "cppdbg",
         "request": "launch",
@@ -27,6 +24,7 @@
             "ignoreFailures": true
           }
         ],
+        "preLaunchTask": "${defaultBuildTask}",
       }
     ],
     "version": "2.0.0"

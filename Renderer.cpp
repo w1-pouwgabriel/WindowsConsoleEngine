@@ -1,10 +1,12 @@
 #include "header/Renderer.h"
 #include "header/maths/Utils.h"
 
+#include <cstring>
+#include <string>
+
 bool Renderer::OnUserCreate()
 {
     cube.triangles = {
-
 		// SOUTH
 		{ 0.0f, 0.0f, 0.0f,    0.0f, 1.0f, 0.0f,    1.0f, 1.0f, 0.0f },
 		{ 0.0f, 0.0f, 0.0f,    1.0f, 1.0f, 0.0f,    1.0f, 0.0f, 0.0f },
@@ -28,7 +30,6 @@ bool Renderer::OnUserCreate()
 		// BOTTOM                                                    
 		{ 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f },
 		{ 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f,    1.0f, 0.0f, 0.0f },
-
     };
 
     fTheta = 0.0f;
@@ -105,6 +106,8 @@ bool Renderer::OnUserUpdate(float fElapsedTime)
         triProjected.p[0].x += 1.0f; triProjected.p[0].y += 1.0f;
         triProjected.p[1].x += 1.0f; triProjected.p[1].y += 1.0f;
         triProjected.p[2].x += 1.0f; triProjected.p[2].y += 1.0f;
+        float sw = (float)ScreenWidth();
+        float sh = (float)ScreenHeight();
         triProjected.p[0].x *= 0.5f * (float)ScreenWidth();
         triProjected.p[0].y *= 0.5f * (float)ScreenHeight();
         triProjected.p[1].x *= 0.5f * (float)ScreenWidth();
@@ -116,7 +119,7 @@ bool Renderer::OnUserUpdate(float fElapsedTime)
         DrawTriangle(triProjected.p[0].x, triProjected.p[0].y,
             triProjected.p[1].x, triProjected.p[1].y,
             triProjected.p[2].x, triProjected.p[2].y,
-            PIXEL_SOLID, FG_BLACK);
+            PIXEL_SOLID, FG_WHITE);
 
     }
 
