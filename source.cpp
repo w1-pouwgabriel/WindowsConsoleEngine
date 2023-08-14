@@ -10,11 +10,9 @@ std::mutex ConsoleEngine::m_muxGame;
 int main()
 {
     Renderer app;
-    if (app.ConstructConsole(190, 100, 4, 4)){
+    if (app.ConstructConsole(180, 150, 4, 4)){
 		  app.Start();
     }
-
-    system("pause");
 
     return 0;
 }
