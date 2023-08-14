@@ -116,11 +116,9 @@ bool Renderer::OnUserUpdate(float fElapsedTime)
         DrawTriangle(triProjected.p[0].x, triProjected.p[0].y,
             triProjected.p[1].x, triProjected.p[1].y,
             triProjected.p[2].x, triProjected.p[2].y,
-            PIXEL_SOLID, FG_WHITE);
+            PIXEL_SOLID, FG_BLACK);
 
     }
-
-    //DrawCircle(128, 120, 5, PIXEL_SOLID, FG_WHITE);
 
     return true;
 }
