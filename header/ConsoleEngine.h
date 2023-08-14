@@ -12,6 +12,7 @@
 #include <condition_variable>
 #include <math.h>
 #include <cstring>
+#include <string>
 
 enum COLOUR
 {
