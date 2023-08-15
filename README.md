@@ -7,6 +7,6 @@
 <H3> Resources I found online<H3>
 <ul>
   <li>Z-Buffer alternative: <a href="https://www.geeksforgeeks.org/painters-algorithm-in-computer-graphics/">Painter’s Algorithm in Computer Graphics</a></li>
-  <li>Tea</li>
+  <li>Compiler toolchain to WebAssembly: <a href="https://emscripten.org/docs/introducing_emscripten/about_emscripten.html">Emscripten</a></li>
   <li>Milk</li>
 </ul>
